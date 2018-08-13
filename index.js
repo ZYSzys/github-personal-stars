@@ -1,6 +1,6 @@
 const GitHub = require('gh.js')
 
-function countPersonalStars(username, token, callback) {
+function countPersonalStars (username, token, callback) {
   if (typeof token === 'function') {
     callback = token
     token = undefined
