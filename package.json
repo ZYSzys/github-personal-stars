@@ -7,7 +7,8 @@
     "personal-stars": "./bin/personal-stars"
   },
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "cover": "istanbul cover bin/personal-stars ZYSzys"
   },
   "repository": {
     "type": "git",
