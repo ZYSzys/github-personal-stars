@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "node test.js",
-    "cover": "istanbul cover bin/personal-stars ZYSzys"
+    "cover": "istanbul cover bin/personal-stars ZYSzys && codecov"
   },
   "repository": {
     "type": "git",
@@ -29,5 +29,8 @@
     "gh.js": "3.0.12",
     "ora": "3.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "codecov": "3.0.4",
+    "istanbul": "0.4.5"
+  }
 }
