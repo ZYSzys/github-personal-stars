@@ -1,10 +1,9 @@
 language: node_js
 node_js: 
   - "10"
-install:
+script:
   - npm install -g istanbul
   - npm install -g codecov
-script:
   - npm run cover
   - codecov
 after_script: "cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js"
