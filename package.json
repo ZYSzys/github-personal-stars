@@ -24,9 +24,9 @@
   },
   "homepage": "https://github.com/ZYSzys/github-personal-stars#readme",
   "dependencies": {
-    "gh.js": "3.0.12"
-  },
-  "devDependencies": {
+    "chalk": "2.4.1",
+    "gh.js": "3.0.12",
     "ora": "3.0.0"
-  }
+  },
+  "devDependencies": {}
 }

@@ -1,18 +1,23 @@
 #!/usr/bin/env node
 
 const ora = require('ora')
+const chalk = require('chalk')
 const spinner = ora('Counting...')
 spinner.start()
 
 if (!process.argv[2]) {
   spinner.stop()
-  console.log('github-personal-stars ~ ' + require('../package').version)
+  console.log(chalk.green('github-personal-stars ~ ' + require('../package').version))
+  console.log(chalk.gray('Count your personal repos total stars in command line.'))
+  console.log(chalk.cyan('  $ ') + 'personal-stars torvalds')
+  console.log(chalk.cyan('  $ ') + 'personal-stars ZYSzys')
+  
   return
 } else {
   const username = process.argv.slice(2).join('')
   const stars = require('..')
   stars(username, (err, res) => {
     spinner.stop()
-    console.log(err || (username + ' has ' + res + ' stars totally!'))
+    console.log(err || (username + ' has ' + chalk.red(res) + ' stars totally!'))
   })
 }
