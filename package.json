@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Count your personal repos' total stars.",
   "main": "index.js",
+  "bin": {
+    "personal-stars": "./bin/personal-stars"
+  },
   "scripts": {
     "test": "node test.js"
   },
@@ -23,5 +26,7 @@
   "dependencies": {
     "gh.js": "3.0.12"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "ora": "3.0.0"
+  }
 }

@@ -1,0 +1,18 @@
+#!/usr/bin/env node
+
+const ora = require('ora')
+const spinner = ora('Counting...')
+spinner.start()
+
+if (!process.argv[2]) {
+  spinner.stop()
+  console.log('github-personal-stars ~ ' + require('../package').version)
+  return
+} else {
+  const username = process.argv.slice(2).join('')
+  const stars = require('..')
+  stars(username, (err, res) => {
+    spinner.stop()
+    console.log(err || (username + ' has ' + res + ' stars totally!'))
+  })
+}
